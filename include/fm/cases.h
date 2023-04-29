@@ -23,15 +23,16 @@ namespace fm {
  * \param pairs Sub-function - condition (subdomain) pairs.
  * \return Function evaluation result.
  */
-inline double
-cases(std::vector<std::pair<std::function<double()>, bool>> pairs) {
+template<typename T>
+inline T
+cases(std::vector<std::pair<std::function<T()>, bool>> pairs) {
   for (auto& pair : pairs) {
     if (pair.second) {
       return pair.first();
     }
   }
 
-  return 0.0;
+  return T(0);
 }
 
 

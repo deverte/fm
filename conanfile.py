@@ -1,16 +1,10 @@
-import os
-
 from conan import ConanFile
 from conan.tools.files import copy
 
 
-version = os.environ['version']
-project = os.environ['project']
-
-
 class FM(ConanFile):
-    name = project
-    version = version
+    name = "fm"
+    version = "0.1.2"
     exports_sources = "include/*"
     no_copy_source = True
 

@@ -1,5 +1,5 @@
-export project = fm
-export version = 0.1.0
+project = fm
+version = 0.1.2
 
 
 .PHONY: build

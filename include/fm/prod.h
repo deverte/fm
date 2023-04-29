@@ -22,9 +22,10 @@ namespace fm {
  * \param f Indexed terms of the product.
  * \return Product evaluation result.
  */
-inline double
-prod(int lower_bound, int upper_bound, std::function<double(int)> f) {
-  double res = 1.0;
+template<typename T>
+inline T
+prod(int lower_bound, int upper_bound, std::function<T(int)> f) {
+  T res = T(1);
 
   for (int i = lower_bound; i <= upper_bound; i++) {
     res *= f(i);

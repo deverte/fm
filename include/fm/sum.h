@@ -22,9 +22,10 @@ namespace fm {
  * \param f Indexed terms of the sum.
  * \return Summation evaluation result.
  */
-inline double
-sum(int lower_bound, int upper_bound, std::function<double(int)> f) {
-  double res = 0.0;
+template<typename T>
+inline T
+sum(int lower_bound, int upper_bound, std::function<T(int)> f) {
+  T res = T(0);
 
   for (int i = lower_bound; i <= upper_bound; i++) {
     res += f(i);
