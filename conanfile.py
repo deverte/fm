@@ -12,5 +12,8 @@ class FM(ConanFile):
         copy(self, "*.h", self.source_folder, self.package_folder)
 
     def package_info(self):
-         self.cpp_info.bindirs = []
-         self.cpp_info.libdirs = []
+        self.cpp_info.bindirs = []
+        self.cpp_info.libdirs = []
+
+    def package_id(self):
+        self.info.clear()

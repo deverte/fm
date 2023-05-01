@@ -13,7 +13,7 @@ conan remote add astro https://gitea.zarux.ru/api/packages/astro/conan
 Install:
 
 ```sh
-conan install --remote=astro fm/0.1.0
+conan install --remote=astro fm/<VERSION>
 ```
 
 ## Documentation
