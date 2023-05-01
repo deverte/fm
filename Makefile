@@ -4,7 +4,7 @@ version = 0.1.2
 
 .PHONY: build
 build:
-	conan create . # build inside Conan cache (~/conan2/p)
+	conan create . --build=missing # build inside Conan cache (~/conan2/p)
 
 
 .PHONY: publish
