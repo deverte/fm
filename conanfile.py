@@ -9,7 +9,7 @@ class Fm(ConanFile):
     no_copy_source = True
 
     def requirements(self):
-        self.requires("boost/1.81.0")
+        self.requires("zlib/1.2.13") # Workaround for conaninfo.txt generation
 
     def package(self):
         copy(self, "*.h", self.source_folder, self.package_folder)
