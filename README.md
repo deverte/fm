@@ -67,6 +67,39 @@ double f(double x) {
 }
 ```
 
+### Indexed Family
+
+Indexed family, monad compherension (e.g. set comprehension (set-builder
+notation, set abstraction), list comprehension).
+
+Indexed family notation:
+
+$$
+v = \left( v_i \right)_{i = \overline{0, 9}} =
+    \left( i^2 \right)_{i = \overline{0, 9}}
+$$
+
+or set-builder notation:
+
+$$
+v = \{ i^2 | i \in \mathbb{Z}, 0 \leq i \leq 9 \}
+$$
+
+or lambda expression:
+
+$$
+v_i = (i) \rightarrow i^2 \ \forall \ i \in \mathbb{Z}, \ 0 \leq i \leq 9
+$$
+
+```cpp
+std::vector<double> v() {
+  std::vector<double> res;
+  fm::family(0, 9, [&](int i) { res[i] = i * i; });
+  return res;
+}
+```
+
 ## License
 
-GPL
+License: [GPL-3](./LICENSE)  
+Author: [Artem Shepelin](mailto:4.shepelin@gmail.com)

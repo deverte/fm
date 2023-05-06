@@ -9,5 +9,6 @@
 
 
 #include "./cases.h"
+#include "./family.h"
 #include "./prod.h"
 #include "./sum.h"
