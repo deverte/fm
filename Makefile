@@ -1,5 +1,5 @@
 project = fm
-version = 0.1.3
+version = 0.1.3 # conanfile.py
 
 
 .PHONY: build
